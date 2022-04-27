@@ -11,7 +11,7 @@ public class PrimsAlgorithm
         int parent[] = new int[n];
         int weight[] = new int[n];
         // assign the value of source vertex from where you start
-        parent[0] = -1;
+        parent[0] = 0;
         weight[0] = 0;
         for (int i = 1; i <n ; i++) {
             weight[i] = Integer.MAX_VALUE;
@@ -33,7 +33,7 @@ public class PrimsAlgorithm
             }
         }
         // printing the minimum spanning tree
-        for (int i = 0; i <n ; i++) {
+        for (int i = 1; i <n ; i++) {
             if(i<parent[i])
             {
                 System.out.println(i+ "   "+parent[i]+ "   "+ weight[i]);
